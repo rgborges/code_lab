@@ -1,0 +1,228 @@
+/*General configs */
+body {
+    font-family: 'Roboto Slab';
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(19, 14, 14);
+    font-size: 16px;
+    color: white;
+}
+span {
+    color: rgb(113, 14, 212);
+}
+p {
+    font-size: 16px;
+}
+h1 {
+    font-size: 64px;
+
+}
+h2 {
+    font-size: 56px;
+}
+h3 {
+    font-size: 32px;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 16px;
+}
+nav {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+article {
+    padding: 2rem;
+}
+section {
+    min-height: 25rem;
+    margin-top: 2rem 2rem 2rem 2rem;
+}
+a {
+    color: white;
+    font-style: normal;
+}
+a:hover {
+    color: rgb(255, 16, 164);
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.h-min-sm {
+    min-height: 100px;
+    width: auto;
+}
+.h-sm {
+    min-height: 250px;
+    width: auto;
+}
+.w-1 {
+    width: 50%;
+}
+.w-2 {
+    width: 100%;
+}
+.justify {
+    text-justify: distribute-all-lines;
+    text-align: justify;
+}
+.rouded-image {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.container-reseted {
+    margin: 0px;
+    padding: 0px;
+}
+.position-relative-1 {
+    position: relative;
+    bottom: 0.1rem;
+    left: 0.1rem;
+}
+.position-fixed-1 {
+    position: fixed;
+}
+.c-b {
+    background-color: rgb(19, 14, 14);
+    color: white;
+}
+.c-g {
+    color: rgb(255, 16, 164);
+}
+.border-top {
+    border-top: 1px solid rgb(32, 28, 28);
+}
+.nav-container-options {
+    padding: 10px;
+}
+.nav-container-options ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+.nav-container-options ul li {
+    padding: 10px;
+    padding-left: 15px;
+}
+.banner-container {
+    height: auto;
+    align-content: center;
+    color: white;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(236, 7, 148, 0.87) 35%, rgb(192, 4, 76) 100%);
+}
+.banner-frame-box-container {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    min-height: 20rem;
+}
+.banner-box-container {
+    padding: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.banner-box-title {
+    height: auto;
+    width: 50%;
+}
+.banner-box-job {
+    padding: 2rem;
+}
+.banner-cat-service-container {
+    margin: 1rem;
+    overflow: hidden;
+}
+.banner-cat-service {
+    padding: 2 rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: center;
+    justify-content: space-between;
+}
+.banner-cat-service article {
+    margin: 1rem;
+}
+.banner-cat-service-item {
+    padding: 2rem;
+    border: 1px rgb(255, 16, 164);
+    background: rgb(131,58,180);
+    background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,148,1) 83%, rgb(255, 0, 106) 100%); 
+    border-radius: 15px;
+    margin: 1rem;
+    width: 18rem;
+}
+.btn-bglab {
+    border: 1px solid rgb(255, 16, 164);
+    border-radius: 1 rem;
+    padding: 1rem;
+    align-content: center;
+    background-color: black;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.banner-cat-skills-container {
+    margin: 20px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.banner-cat-skills-tag {
+    background-color: black;
+    border: 1 px solid white;
+    border-radius: 15px;
+    min-width: 6rem;
+    width: auto;
+    padding: 0.4rem;
+    margin: 0.4rem;
+}
+.banner-cat-skills-tag:hover {
+    background-color: rgb(131,58,180);
+    color: white;
+}
+.container {
+    margin: 1rem;
+    padding: 2rem;
+}
+.banner-footer-container {
+    display: flex;
+    align-items: center;
+}
+.banner-footer-item {
+    padding: 1rem;
+}
+.banner-footer-header {
+    font-size: 32px;
+    margin: 15px;
+}
+.banner-footer-list {
+    margin-top: 15px;
+}
+.banner-footer-list-item {
+    font-size: 16px;
+    margin: 15px;  
+    list-style: none;
+}

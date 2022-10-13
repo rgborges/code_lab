@@ -1,0 +1,22 @@
+body{
+      margin: 0px;
+      padding:0px;
+      font-size: 32px;
+      color: white;
+      background-color: black;
+}
+
+.grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: rgb(2, 1, 1);
+      border: 1px solid rgba(69, 2, 90, 0.562);
+      padding: 10px;
+}
+.grid-item {
+      margin: 1rem;
+      background-color: rgba(69, 2, 90, 0.562);
+      padding: 20px;
+      text-align: center;
+      border-radius: 1rem;
+}

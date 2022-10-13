@@ -1,0 +1,13 @@
+[Oo]bj
+[Bb]in
+
+.vscode
+
+
+.dll
+.pdb
+.cache
+
+
+net6.0/
+

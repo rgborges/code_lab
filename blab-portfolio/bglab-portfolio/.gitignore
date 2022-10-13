@@ -1,0 +1,11 @@
+[Oo]bj
+[Bb]in
+net***
+
+/*/node_modules/
+.vscode/
+node_modules
+
+.dll
+.cache
+.pdb
