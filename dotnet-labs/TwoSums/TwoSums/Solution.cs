@@ -2,7 +2,7 @@ public static class Solution
 {
       public static int[] TwoSum(int[] nums, int target)
       {
-            //par cada numero em nums, verifica se a soma e igual ao target de todos os numeros
+            //para cada numero em nums, verifica se a soma e igual ao target de todos os numeros
             //se sim para looping e retornar o resultado 
             for(int i = 0; i < nums.Length; i++)
             {
