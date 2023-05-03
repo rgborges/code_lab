@@ -1,0 +1,67 @@
+﻿@page "/"
+<div>
+      <div class="main-div">
+            <div class="item-container">
+                  @foreach (var item in Items)
+                  {
+                        <div class="item">
+                              <p>X</p>
+                              <div>@item.Name</div>
+                              @if (item.Done)
+                              {
+                                    <div><button class="btn-green">Finish</button></div>     
+                              } else {
+                                    <div><button>Ok</button></div>
+                              }                             
+                        </div>
+                  }
+            </div>
+      </div>
+</div>
+
+<style>
+      head {
+            font-size: 36px;
+      }
+      .main-div {
+            padding: 15%;
+            font-size: 36px;
+      }
+      .item-container {
+            padding: 12% ;
+            border-color: 1px azure;
+            border-style: solid;
+      }
+      .item {
+            margin: 1%;
+            border-top: 0.5px solid gray;
+      }
+      .item div, p {
+            margin-left: 2%;
+            display: inline-block;
+      }
+      .item button {
+            font-size: 24px;
+      }
+      .btn-green {
+            background-color: green;
+            color: white;
+      }
+      .item-text {
+
+      }
+</style>
+
+@code
+{
+      
+      public IEnumerable<ItemDTO> Items { get {
+            return new List<ItemDTO>() {
+                  new ItemDTO { Name = "Take the trash out", Done = false },
+                  new ItemDTO { Name = "Get my homework done", Done = false },
+                  new ItemDTO { Name = "Work a little bit more", Done = true }    
+            };
+      }}
+
+      
+}
