@@ -1,0 +1,157 @@
+﻿@page "/"
+<div>
+      <div class="main-div">
+            <div class="task-container">
+                  <label class="form-control-task">
+                        <input @bind="newTaskName" type="text" placeholder="Type your new task"/>
+                        <button @onclick="AddTask">Add</button>
+                  </label>
+            </div>
+            <div class="item-container">
+                  @if (Items is null)
+                  {
+                        <p>Loading</p>
+                  }
+                  @foreach (var item in Items)
+                  {
+                        <div class="item">
+                              <label class="form-control">
+                                    <input class="form-control-item" @bind="@item.Done" type="checkbox" @onclick="() => Finish(item)"/>
+                                    <div class="form-control-item">@item.Name</div>
+                              </label>
+                        </div>
+                  }
+            </div>
+      </div>
+</div>
+
+<style>
+      head {
+            font-size: 36px;
+      }
+      .main-div {
+            padding: 15%;
+            font-size: 36px;
+      }
+      .item-container {
+            padding: 10px 3px 10px 3px;
+            /* border-color: 1px azure;
+            border-style: solid; */
+      }
+      .item {
+            margin: 1%;
+            padding: 7%;
+            border: 0.5px solid gray;
+            border-radius: 15px;
+            overflow: hidden;
+            height: auto;
+
+      }
+      .item div, p {
+            margin-left: 2%;
+            display: inline-block;
+      }
+      .item div, input {
+            height: auto;
+      }
+      .item button {
+            font-size: 24px;
+      }
+      .btn-green {
+            background-color: green;
+            color: white;
+      }
+      .item-text {
+
+      }
+      .item-checkbox {
+            height: 10px;
+            width: auto;
+      }
+      .form-control {
+            font-size: 4rem;
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: 1em auto;
+            gap: 0.5em;
+      }
+      .form-control-task {
+            font-size: 4em;
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: auto 2em;
+            gap: 0.5em;
+            height: auto;
+      }
+      .form-control-task input {
+            background-color: black;
+            color: white;
+            border-color: rgb(0, 255, 157);
+            padding-left: 5px;
+            height: 3.5em;
+            margin: 1px;
+      }
+      .form-control-task input, button {
+            font-size: 42px;
+            border-radius: 15px;
+      }
+      .task-container {
+            height: 12vh;
+      }
+      input[type="text"] {
+            padding: 10px;
+      }
+      input[type="checkbox"] {
+            display: grid;
+            place-content: center;
+      }
+      input[type="checkbox"]::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+}
+     
+</style>
+
+@code
+{
+      private ItemDTO? SelectedItemDTO { get; set; }
+      private string? newTaskName { get; set; }
+      public IList<ItemDTO>? Items { get; private set; } = new List<ItemDTO>();
+      
+      protected override void OnInitialized()
+      {
+            Items = new List<ItemDTO>() {
+                  new ItemDTO { Id = 1, Name = "Get things done ⚡", Done = false },
+                  new ItemDTO { Id = 2, Name = "Do my homework 🐳", Done = false },
+                  new ItemDTO { Id = 3, Name = "Build a new code 🚘", Done = false }
+            };
+      }
+      public void Finish(ItemDTO item)
+      {
+            if (Items is null) { return; }
+            Console.WriteLine($"Item {item.Name} finalizado");
+            item.Done = true;
+      }
+      public void AddTask()
+      {
+            var lastItem = Items.LastOrDefault<ItemDTO>();
+            var newItem = new ItemDTO { Id = lastItem.Id + 1, Name = newTaskName, Done = false };
+            Items.Add(newItem);
+      }
+
+      public void Toggle(EventArgs e)
+      {
+            
+
+      }
+      public void SelectItem(ItemDTO item)
+      {
+            SelectedItemDTO = item;
+      }
+
+      
+}
